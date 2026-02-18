@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WANDALE Marble & Granite Works</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="images/wandalelogo.png" alt="WANDALE" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-main">Wandale</span>
+                    <span class="logo-sub">Marble and Granite</span>
+                    <span class="logo-location">UGANDA</span>
+                </div>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="#projects" class="nav-link">Our Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#products" class="mobile-link">Products</a>
+            <a href="#projects" class="mobile-link">Our Projects</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section with Background Image -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <img src="images/wandale.png" alt="WANDALE Marble" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Timeless Elegance <span class="text-gradient">in Stone</span></h1>
+            <p class="hero-subtitle">Discover the finest marble and granite works in Uganda</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">Get Quote</a>
+                <a href="#projects" class="btn-outline">View Projects</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="section-title">About <span class="text-gradient">WANDALE</span></h2>
+                    <p class="about-text">With over 15 years of experience, WANDALE Marble & Granite Works has been transforming spaces with the finest natural stones. We source premium marble and granite from around the world and combine traditional craftsmanship with modern technology.</p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h3>15+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>500+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Stone Varieties</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/showroom.jpg" alt="WANDALE Showroom">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our <span class="text-gradient">Services</span></h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-utensils service-icon"></i>
+                    <h3>Kitchen Countertops</h3>
+                    <p>Custom kitchen surfaces with premium marble and granite</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cross service-icon"></i>
+                    <h3>Memorial Tombs</h3>
+                    <p>Elegant and durable memorial stoneworks</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-stairs service-icon"></i>
+                    <h3>Staircases</h3>
+                    <p>Magnificent marble staircases for your home</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-border-all service-icon"></i>
+                    <h3>Flooring</h3>
+                    <p>Luxurious marble and granite flooring solutions</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-paint-roller service-icon"></i>
+                    <h3>Custom Designs</h3>
+                    <p>Bespoke marble creations tailored to your vision</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section (Available Marble & Granite) -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Available <span class="text-gradient">Products</span></h2>
+            <p class="section-subtitle">Browse our collection of premium stones</p>
+            
+            <!-- Product Categories -->
+            <div class="product-categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="marble">Marble</button>
+                <button class="category-btn" data-category="granite">Granite</button>
+                <button class="category-btn" data-category="quartzite">Quartzite</button>
+                <button class="category-btn" data-category="onyx">Onyx</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded dynamically from Firebase -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section (Pinned Scroll) -->
+    <section id="why-choose-us" class="why-choose-us">
+        <!-- Light Orbs -->
+        <div class="light-orb light-orb-gold orb-1"></div>
+        <div class="light-orb light-orb-sky orb-2"></div>
+
+        <!-- Left Image -->
+        <div class="why-image" id="whyImage">
+            <img src="images/workshop.jpg" alt="Stone Workshop">
+            <div class="image-overlay"></div>
+            <div class="image-glow"></div>
+        </div>
+
+        <!-- Right Panel -->
+        <div class="why-panel" id="whyPanel"></div>
+
+        <!-- Vertical Hairline -->
+        <div class="why-hairline" id="whyHairline"></div>
+
+        <!-- Headline -->
+        <h2 class="why-headline" id="whyHeadline">
+            <span>WHY</span>
+            <span class="text-gradient">CHOOSE US</span>
+        </h2>
+
+        <!-- Features List -->
+        <ul class="why-features" id="whyFeatures">
+            <li class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <span>Expert Installation</span>
+            </li>
+            <li class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <span>Custom Designs</span>
+            </li>
+            <li class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <span>Durable Finishes</span>
+            </li>
+            <li class="feature-item">
+                <div class="feature-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <span>On-Time Delivery</span>
+            </li>
+        </ul>
+
+        <!-- CTA Button -->
+        <button class="btn-primary why-cta" id="whyCta">Request a Quote</button>
+    </section>
+
+    <!-- Projects Gallery Section (Formerly Gallery) -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Our <span class="text-gradient">Projects</span></h2>
+            <p class="section-subtitle">Daily work and completed projects</p>
+            
+            <!-- Project Filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+                <button class="filter-btn" data-filter="tombs">Tombs</button>
+                <button class="filter-btn" data-filter="stairs">Stairs</button>
+                <button class="filter-btn" data-filter="flooring">Flooring</button>
+                <button class="filter-btn" data-filter="custom">Custom</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be loaded dynamically from Firebase -->
+            </div>
+            
+            <div class="view-more">
+                <a href="#" class="view-more-btn">Browse Full Gallery <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <!-- Light Orbs -->
+        <div class="light-orb light-orb-gold orb-contact-1"></div>
+        <div class="light-orb light-orb-sky orb-contact-2"></div>
+
+        <div class="contact-container">
+            <div class="contact-grid">
+                <!-- Form Block -->
+                <div class="contact-form-block" id="contactForm">
+                    <h2 class="contact-title">
+                        START YOUR
+                        <span class="text-gradient">PROJECT</span>
+                    </h2>
+                    <p class="contact-subtitle">Tell us what you need. We will recommend stone, finishes, and timeline—fast.</p>
+
+                    <form id="contactFormElement" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">NAME</label>
+                                <input type="text" name="name" class="form-input" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">EMAIL</label>
+                                <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">PHONE</label>
+                            <input type="tel" name="phone" class="form-input" placeholder="+256 700 000 000">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">MESSAGE</label>
+                            <textarea name="message" class="form-textarea" rows="5" placeholder="Tell us about your project..." required></textarea>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="submit" class="btn-primary" id="submitBtn">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                            <a href="tel:+256766820108" class="btn-outline">Request a Call</a>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Details Block -->
+                <div class="contact-details" id="contactDetails">
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <div class="detail-icon icon-sky">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">EMAIL</span>
+                                <a href="mailto:info@wandalestone.ug" class="detail-link">info@wandalestone.ug</a>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <div class="detail-icon icon-gold">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">PHONE</span>
+                                <a href="tel:+256766820108" class="detail-link">+256 766 820108</a>
+                                <a href="tel:+256740016218" class="detail-link small">+256 740 016218</a>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <div class="detail-icon icon-purple">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">LOCATION</span>
+                                <span class="detail-text">Kampala, Uganda</span>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <div class="detail-icon icon-sky">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="detail-content">
+                                <span class="detail-label">HOURS</span>
+                                <span class="detail-text">Mon–Sat, 08:00–18:00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-section">
+                        <span class="social-label">FOLLOW US</span>
+                        <div class="social-links">
+                            <a href="https://instagram.com" target="_blank" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://facebook.com" target="_blank" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://wa.me/256766820108" target="_blank" class="social-link">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="https://tiktok.com" target="_blank" class="social-link">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                            <a href="https://youtube.com" target="_blank" class="social-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer" id="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/wandalelogo.png" alt="WANDALE" class="footer-logo-img">
+                </div>
+                <span class="footer-copyright">© 2026 Wandale Marble and Granite Works. All rights reserved.</span>
+            </div>
+        </footer>
+    </section>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/firebase-config.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/why-choose-us.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
