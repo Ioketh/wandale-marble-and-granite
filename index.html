@@ -37,8 +37,9 @@
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#services" class="nav-link">Services</a>
-                <a href="#products" class="nav-link">Products</a>
-                <a href="#projects" class="nav-link">Our Projects</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="projects.html" class="nav-link">Our Projects</a>
+                <a href="#quotation" class="nav-link">Quotation</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -53,8 +54,9 @@
             <a href="#home" class="mobile-link">Home</a>
             <a href="#about" class="mobile-link">About</a>
             <a href="#services" class="mobile-link">Services</a>
-            <a href="#products" class="mobile-link">Products</a>
-            <a href="#projects" class="mobile-link">Our Projects</a>
+            <a href="products.html" class="mobile-link">Products</a>
+            <a href="projects.html" class="mobile-link">Our Projects</a>
+            <a href="#quotation" class="mobile-link">Quotation</a>
             <a href="#contact" class="mobile-link">Contact</a>
         </div>
     </div>
@@ -69,8 +71,8 @@
             <h1 class="hero-title">Timeless Elegance <span class="text-gradient">in Stone</span></h1>
             <p class="hero-subtitle">Discover the finest marble and granite works in Uganda</p>
             <div class="hero-buttons">
-                <a href="#contact" class="btn-primary">Get Quote</a>
-                <a href="#projects" class="btn-outline">View Projects</a>
+                <a href="#quotation" class="btn-primary">Get Quote</a>
+                <a href="projects.html" class="btn-outline">View Projects</a>
             </div>
         </div>
         <div class="hero-scroll">
@@ -142,24 +144,22 @@
         </div>
     </section>
 
-    <!-- Products Section (Available Marble & Granite) -->
-    <section id="products" class="products">
+    <!-- Quick Links to Products and Projects -->
+    <section class="quick-links">
         <div class="container">
-            <h2 class="section-title">Available <span class="text-gradient">Products</span></h2>
-            <p class="section-subtitle">Browse our collection of premium stones</p>
-            
-            <!-- Product Categories -->
-            <div class="product-categories">
-                <button class="category-btn active" data-category="all">All</button>
-                <button class="category-btn" data-category="marble">Marble</button>
-                <button class="category-btn" data-category="granite">Granite</button>
-                <button class="category-btn" data-category="quartzite">Quartzite</button>
-                <button class="category-btn" data-category="onyx">Onyx</button>
-            </div>
-
-            <!-- Products Grid -->
-            <div class="products-grid" id="productsGrid">
-                <!-- Products will be loaded dynamically from Firebase -->
+            <div class="quick-links-grid">
+                <a href="products.html" class="quick-link-card">
+                    <i class="fas fa-gem"></i>
+                    <h3>Our Products</h3>
+                    <p>Browse our collection of premium marble and granite</p>
+                    <span class="quick-link-btn">View Products <i class="fas fa-arrow-right"></i></span>
+                </a>
+                <a href="projects.html" class="quick-link-card">
+                    <i class="fas fa-hard-hat"></i>
+                    <h3>Our Projects</h3>
+                    <p>Explore our completed works with images and videos</p>
+                    <span class="quick-link-btn">View Projects <i class="fas fa-arrow-right"></i></span>
+                </a>
             </div>
         </div>
     </section>
@@ -221,29 +221,139 @@
         <button class="btn-primary why-cta" id="whyCta">Request a Quote</button>
     </section>
 
-    <!-- Projects Gallery Section (Formerly Gallery) -->
-    <section id="projects" class="projects">
+    <!-- Quotation Section -->
+    <section id="quotation" class="quotation">
         <div class="container">
-            <h2 class="section-title">Our <span class="text-gradient">Projects</span></h2>
-            <p class="section-subtitle">Daily work and completed projects</p>
-            
-            <!-- Project Filters -->
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="kitchen">Kitchen</button>
-                <button class="filter-btn" data-filter="tombs">Tombs</button>
-                <button class="filter-btn" data-filter="stairs">Stairs</button>
-                <button class="filter-btn" data-filter="flooring">Flooring</button>
-                <button class="filter-btn" data-filter="custom">Custom</button>
-            </div>
-
-            <!-- Projects Grid -->
-            <div class="projects-grid" id="projectsGrid">
-                <!-- Projects will be loaded dynamically from Firebase -->
+            <div class="quotation-header">
+                <h2 class="section-title">Request a <span class="text-gradient">Quotation</span></h2>
+                <p class="section-subtitle">Tell us about your project and we'll provide a detailed estimate</p>
             </div>
             
-            <div class="view-more">
-                <a href="#" class="view-more-btn">Browse Full Gallery <i class="fas fa-arrow-right"></i></a>
+            <div class="quotation-grid">
+                <!-- Quotation Form -->
+                <div class="quotation-form-container">
+                    <form id="quotationForm" class="quotation-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" name="fullname" class="form-input" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" name="phone" class="form-input" placeholder="+256 XXX XXX XXX" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Project Type</label>
+                                <select name="projectType" class="form-select" required>
+                                    <option value="" disabled selected>Select project type</option>
+                                    <option value="kitchen">Kitchen Countertops</option>
+                                    <option value="tomb">Memorial Tomb</option>
+                                    <option value="stairs">Staircase</option>
+                                    <option value="flooring">Flooring</option>
+                                    <option value="bathroom">Bathroom Vanity</option>
+                                    <option value="custom">Custom Design</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Stone Type (Optional)</label>
+                                <select name="stoneType" class="form-select">
+                                    <option value="" selected>Select stone type</option>
+                                    <option value="marble">Marble</option>
+                                    <option value="granite">Granite</option>
+                                    <option value="quartzite">Quartzite</option>
+                                    <option value="travertine">Travertine</option>
+                                    <option value="onyx">Onyx</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Approximate Area (m²)</label>
+                                <input type="number" name="area" class="form-input" placeholder="e.g., 25" min="1" step="0.5">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Project Details</label>
+                            <textarea name="details" class="form-textarea" rows="4" placeholder="Describe your project in detail... (size, style, preferences, etc.)" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Preferred Timeline</label>
+                            <select name="timeline" class="form-select" required>
+                                <option value="" disabled selected>Select timeline</option>
+                                <option value="urgent">Urgent (Within 1 week)</option>
+                                <option value="standard">Standard (2-3 weeks)</option>
+                                <option value="flexible">Flexible (1-2 months)</option>
+                                <option value="planning">Just planning</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group upload-group">
+                            <label class="form-label">Upload Design/Sketch (Optional)</label>
+                            <div class="file-upload">
+                                <input type="file" name="design" id="designFile" accept="image/*,.pdf">
+                                <label for="designFile" class="file-upload-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Click to upload or drag and drop</span>
+                                    <small>PDF, JPG, PNG (Max 10MB)</small>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="siteVisit" value="yes">
+                                <span class="checkbox-custom"></span>
+                                I would like to request a site visit
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary quotation-submit">
+                            <i class="fas fa-calculator"></i>
+                            Request Quotation
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Quotation Info -->
+                <div class="quotation-info">
+                    <div class="info-card">
+                        <h3><i class="fas fa-clock"></i> Quick Response</h3>
+                        <p>We typically respond to quotation requests within 24 hours during business days.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-ruler-combined"></i> Free Measurements</h3>
+                        <p>We offer free site measurements and consultation for all quotation requests.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-percent"></i> No Obligation</h3>
+                        <p>Our quotations are completely free with no obligation to proceed.</p>
+                    </div>
+                    
+                    <div class="info-card highlight">
+                        <h3><i class="fas fa-phone-alt"></i> Need Help?</h3>
+                        <p>Call us directly for urgent inquiries:</p>
+                        <a href="tel:+256766820108" class="info-phone">+256 766 820108</a>
+                        <a href="tel:+256740016218" class="info-phone">+256 740 016218</a>
+                    </div>
+                    
+                    <div class="info-testimonial">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"The quotation process was seamless. They visited our site, took measurements, and provided a detailed breakdown within two days."</p>
+                        <span class="testimonial-author">— James M., Kampala</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -305,7 +415,7 @@
                             </div>
                             <div class="detail-content">
                                 <span class="detail-label">EMAIL</span>
-                                <a href="mailto:info@wandalestone.ug" class="detail-link">info@wandalestone.ug</a>
+                                <a href="mailto:Wandalemarblegranite@gmail.com" class="detail-link">info@wandalestone.ug</a>
                             </div>
                         </div>
 
@@ -348,16 +458,16 @@
                             <a href="https://instagram.com" target="_blank" class="social-link">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="https://facebook.com" target="_blank" class="social-link">
+                            <a href="https://www.facebook.com/share/1AYojJnntk/" target="_blank" class="social-link">
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                             <a href="https://wa.me/256766820108" target="_blank" class="social-link">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
-                            <a href="https://tiktok.com" target="_blank" class="social-link">
+                            <a href="https://www.tiktok.com/@wandale.marble.gr?_r=1&_t=ZS-941PUWiwhUq" target="_blank" class="social-link">
                                 <i class="fab fa-tiktok"></i>
                             </a>
-                            <a href="https://youtube.com" target="_blank" class="social-link">
+                            <a href="https://www.youtube.com/@WandaleMarbleGranite" target="_blank" class="social-link">
                                 <i class="fab fa-youtube"></i>
                             </a>
                         </div>
@@ -386,9 +496,8 @@
     <script src="js/firebase-config.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/why-choose-us.js"></script>
+    <script src="js/quotation.js"></script>
     <script src="js/contact.js"></script>
-    <script src="js/products.js"></script>
-    <script src="js/projects.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

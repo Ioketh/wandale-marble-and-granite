@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - WANDALE Marble & Granite</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products-projects.css">
+</head>
+<body>
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="images/wandalelogo.png" alt="WANDALE" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-main">Wandale</span>
+                    <span class="logo-sub">Marble and Granite</span>
+                    <span class="logo-location">UGANDA</span>
+                </div>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="products.html" class="nav-link active">Products</a>
+                <a href="projects.html" class="nav-link">Our Projects</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="index.html#about" class="mobile-link">About</a>
+            <a href="index.html#services" class="mobile-link">Services</a>
+            <a href="products.html" class="mobile-link">Products</a>
+            <a href="projects.html" class="mobile-link">Our Projects</a>
+            <a href="index.html#contact" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Our <span class="text-gradient">Products</span></h1>
+            <p class="page-subtitle">Browse our collection of premium marble and granite</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <!-- Category Showcase -->
+            <div class="category-showcase">
+                <div class="category-item" data-category="marble">
+                    <i class="fas fa-gem"></i>
+                    <h3>Marble</h3>
+                    <span>Elegant & Timeless</span>
+                </div>
+                <div class="category-item" data-category="granite">
+                    <i class="fas fa-mountain"></i>
+                    <h3>Granite</h3>
+                    <span>Durable & Strong</span>
+                </div>
+                <div class="category-item" data-category="quartzite">
+                    <i class="fas fa-crystal"></i>
+                    <h3>Quartzite</h3>
+                    <span>Luxurious & Unique</span>
+                </div>
+                <div class="category-item" data-category="travertine">
+                    <i class="fas fa-layer-group"></i>
+                    <h3>Travertine</h3>
+                    <span>Classic Beauty</span>
+                </div>
+                <div class="category-item" data-category="onyx">
+                    <i class="fas fa-star"></i>
+                    <h3>Onyx</h3>
+                    <span>Translucent & Rare</span>
+                </div>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="productSearch" placeholder="Search products...">
+                <i class="fas fa-search"></i>
+            </div>
+            
+            <!-- Category Filters -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-category="all">All Products</button>
+                <button class="filter-btn" data-category="marble">Marble</button>
+                <button class="filter-btn" data-category="granite">Granite</button>
+                <button class="filter-btn" data-category="quartzite">Quartzite</button>
+                <button class="filter-btn" data-category="travertine">Travertine</button>
+                <button class="filter-btn" data-category="onyx">Onyx</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="cards-grid" id="productsGrid">
+                <!-- Marble Products -->
+                <div class="interactive-card" data-category="marble" data-id="marble-1">
+                    <div class="card-inner">
+                        <!-- Front of Card -->
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="images/brownquartz.jpg" alt="Carrara Marble" onerror="this.src='https://via.placeholder.com/400x500?text=Carrara+Marble'">
+                                <div class="card-overlay">
+                                    <span class="card-category">Marble</span>
+                                    <h3>brownquartz Marble</h3>
+                                    <div class="card-price">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Back of Card -->
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>Carrara White Marble</h3>
+                            
+                            <div class="card-description"> 
+                                Classic Italian brown marble with soft pure veining. Perfect for countertops, flooring, and wall cladding. Quarried in Tuscany, Italy.
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                                    <span class="detail-value">Marble</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Origin</span>
+                                    <span class="detail-value">Italy</span>
+                                </div>
+                               
+                                <div class="detail-row">
+                                    <span class="detail-label">Finish</span>
+                                    <span class="detail-value">Polished, Honed</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Features</span>
+                                    <span class="detail-value">Durable • Heat Resistant • Elegant</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Used in these projects:</h4>
+                                <div class="project-tags">
+                                    <a href="projects.html#project-1" class="project-tag">Luxury Kitchen</a>
+                                    <a href="projects.html#project-4" class="project-tag">Hotel Lobby</a>
+                                    <a href="projects.html#project-7" class="project-tag">Bathroom Vanity</a>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 1rem; text-align: center;">
+                                <small class="text-secondary">Click card to close</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interactive-card" data-category="marble" data-id="marble-2">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="images/crystal black marina.jpg" alt="Calacatta Marble" onerror="this.src='https://via.placeholder.com/400x500?text=Calacatta+Marble'">
+                                <div class="card-overlay">
+                                    <span class="card-category">Marble</span>
+                                    <h3>Crystal black marina BL <h3>
+                                    <div class="card-price">
+                                         fitted in<span>/m²</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>Crystal black marino Marble</h3>
+                            
+                            <div class="card-description">
+                                Premium Italian marble with black bold gold veining on white pass throughs. The most luxurious choice for high-end interiors.
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                                    <span class="detail-value">Marble</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Origin</span>
+                                    <span class="detail-value">Italy</span>
+                                </div>
+                              
+                                <div class="detail-row">
+                                    <span class="detail-label">Finish</span>
+                                    <span class="detail-value">Polished</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Features</span>
+                                    <span class="detail-value">Premium • Gold Veining • Luxurious</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Used in these projects:</h4>
+                                <div class="project-tags">
+                                    <a href="projects.html#project-2" class="project-tag">Presidential Villa</a>
+                                    <a href="projects.html#project-5" class="project-tag">Showroom</a>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 1rem; text-align: center;">
+                                <small class="text-secondary">Click card to close</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interactive-card" data-category="granite" data-id="granite-1">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="images/blackgalaxy.jpg" alt="Black Galaxy Granite" onerror="this.src='https://via.placeholder.com/400x500?text=Black+Galaxy+Granite'">
+                                <div class="card-overlay">
+                                    <span class="card-category">Granite</span>
+                                    <h3>Black Galaxy Granite</h3>
+                                    <div class="card-price">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>Black Galaxy Granite</h3>
+                            
+                            <div class="card-description">
+                                Deep black granite with sparkling gold and silver flecks. Extremely durable and perfect for high-traffic areas.
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                                    <span class="detail-value">Granite</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Origin</span>
+                                    <span class="detail-value">India</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Price</span>
+                                    <span class="detail-value">UGX 380,000/m²</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Finish</span>
+                                    <span class="detail-value">Polished</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Features</span>
+                                    <span class="detail-value">Sparkling • Durable • Scratch Resistant</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Used in these projects:</h4>
+                                <div class="project-tags">
+                                    <a href="projects.html#project-3" class="project-tag">Modern Kitchen</a>
+                                    <a href="projects.html#project-6" class="project-tag">Office Reception</a>
+                                    <a href="projects.html#project-8" class="project-tag">Bar Counter</a>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 1rem; text-align: center;">
+                                <small class="text-secondary">Click card to close</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interactive-card" data-category="granite" data-id="granite-2">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="images/snow white.jpg"Absolute Black Granite" onerror="this.src='https://via.placeholder.com/400x500?text=Absolute+Black+Granite'">
+                                <div class="card-overlay">
+                                    <span class="card-category">Granite</span>
+                                    <h3>Absolute white granite>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>Absolute white granite>
+                            
+                            <div class="card-description">
+                                Pure white  with the most and best finish .
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                                    <span class="detail-value">Granite</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Origin</span>
+                                    <span class="detail-value">India</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Price</span>
+                                    <span class="detail-value">UGX 420,000/m²</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Finish</span>
+                                    <span class="detail-value">Polished, Leather</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Features</span>
+                                    <span class="detail-value">Uniform • Elegant • Durable</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Used in these projects:</h4>
+                                <div class="project-tags">
+                                    <a href="projects.html#project-9" class="project-tag">Minimalist Kitchen</a>
+                                    <a href="projects.html#project-10" class="project-tag">Conference Room</a>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 1rem; text-align: center;">
+                                <small class="text-secondary">Click card to close</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interactive-card" data-category="quartzite" data-id="quartzite-1">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="images/quartz.jpg" alt="Taj Mahal Quartzite" onerror="this.src='https://via.placeholder.com/400x500?text=Taj+Mahal+Quartzite'">
+                                <div class="card-overlay">
+                                    <span class="card-category">Quartzite</span>
+                                    <h3>supa grey Quartz</h3>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>supa qaulity grey Quartzite</h3>
+                            
+                            <div class="card-description">
+                                Stunning white quartzite with soft grey veining. Harder than marble with the same elegant appearance.
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                                    <span class="detail-value">Quartzite</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Origin</span>
+                                    <span class="detail-value">Brazil</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Price</span>
+                                   
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Finish</span>
+                                    <span class="detail-value">Polished</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Features</span>
+                                    <span class="detail-value">Hard • Durable • Elegant</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Used in these projects:</h4>
+                                <div class="project-tags">
+                                    <a href="projects.html#project-11" class="project-tag">Luxury Bathroom</a>
+                                    <a href="projects.html#project-12" class="project-tag">Kitchen Island</a>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 1rem; text-align: center;">
+                                <small class="text-secondary">Click card to close</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interactive-card" data-category="travertine" data-id="travertine-1">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="images/blackmarkino.jpg" alt="Roman Travertine" onerror="this.src='https://via.placeholder.com/400x500?text=Roman+Travertine'">
+                                <div class="card-overlay">
+                                    <span class="card-category">Black makino</span>
+                                    <h3>black makino</h3>
+                                    <div class="card-price">
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>Roman Travert</h3>
+                            
+                            <div class="card-description">
+                                Classic travertine with natural holes and veins. Perfect for timeless architectural applications.
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                                    <span class="detail-value">Travertine</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Origin</span>
+                                    <span class="detail-value">Turkey</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Price</span>
+                                    <span class="detail-value">UGX 320,000/m²</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Finish</span>
+                                    <span class="detail-value">Tumbled, Honed</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Features</span>
+                                    <span class="detail-value">Classic • Textured • Warm</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Used in these projects:</h4>
+                                <div class="project-tags">
+                                    <a href="projects.html#project-13" class="project-tag">Patio Flooring</a>
+                                    <a href="projects.html#project-14" class="project-tag">Pool Surround</a>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 1rem; text-align: center;">
+                                <small class="text-secondary">Click card to close</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interactive-card" data-category="onyx" data-id="onyx-1">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="images/blueQuartz.jpg" alt="Honey Onyx" onerror="this.src='https://via.placeholder.com/400x500?text=Honey+Onyx'">
+                                <div class="card-overlay">
+                                    <span class="card-category">Quartzite</span>
+                                    <h3>Classic blueQuartz</h3>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>Classic blueQuartz </h3>
+                            
+                            <div class="card-description">
+                                light absorbing ability makes it nice for room with high white and more light
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                                    <span class="detail-value">quartzite</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Origin</span>
+                                    <span class="detail-value">Iran</span>
+                                </div>
+                                
+                                <div class="detail-row">
+                                    <span class="detail-label">Finish</span>
+                                    <span class="detail-value">Polished</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Features</span>
+                                    <span class="detail-value">Translucent • Rare • Dramatic</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Used in these projects:</h4>
+                                <div class="project-tags">
+                                    <a href="projects.html#project-15" class="project-tag">Bar Backlight</a>
+                                    <a href="projects.html#project-16" class="project-tag">Feature Wall</a>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 1rem; text-align: center;">
+                                <small class="text-secondary">Click card to close</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interactive-card" data-category="marble" data-id="marble-3">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="images/pearl black.jpg" alt="Emperador Brown Marble" onerror="this.src='https://via.placeholder.com/400x500?text=Emperador+Brown'">
+                                <div class="card-overlay">
+                                    <span class="card-category">Marble</span>
+                                    <h3>Pearlblack  Marble</h3>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>Pearlblack Marble</h3>
+                            
+                            <div class="card-description">
+                                Rich pure black marble with light light glass like veining. Adds warmth and luxury to any space.
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                0                    <span class="detail-value">Marble</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Asia</span>
+                                    <span class="detail-value">India</span>
+                                </div>
+                                
+                                <div class="detail-row">
+                                    <span class="detail-label">Finish</span>
+                                    <span class="detail-value">Polished</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Features</span>
+                                    <span class="detail-value">Warm • Elegant • Versatile</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Used in these projects:</h4>
+                                <div class="project-tags">
+                                    <a href="projects.html#project-17" class="project-tag">Traditional Kitchen</a>
+                                    <a href="projects.html#project-18" class="project-tag">Fireplace Surround</a>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 1rem; text-align: center;">
+                                <small class="text-secondary">Click card to close</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+             <div class="interactive-card" data-category="granite"data-id="granite-3"></div>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="images/wavegrey.jpg"alt="Emperador Brown Marble" onerror="this.src='https://via.placeholder.com/400x500?text=Emperador+Brown'">
+                                <div class="card-overlay">
+                                    <span class="card-category">granite </span>
+                                    <h3>Wave grey granite</h3>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>Wave grey granite</h3>
+                            
+                            <div class="card-description">
+                                Rich pure to Ugandan natural qualityand pride, greatw finshing set to long lasting          </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                0                    <span class="detail-value">granite</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">UGANDA</span>
+                                    <span class="detail-value">Mawale</span>
+                                </div>
+                                
+                                <div class="detail-row">
+                                    <span class="detail-label">Finish</span>
+                                    <span class="detail-value">Polished</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Features</span>
+                                    <span class="detail-value">Warm • Elegant • Versatile</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Used in these projects:</h4>
+                                <div class="project-tags">
+                                    <a href="projects.html#project-17" class="project-tag">Traditional Kitchen</a>
+                                    <a href="projects.html#project-18" class="project-tag">tombs and memories/a>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 1rem; text-align: center;">
+                                <small class="text-secondary">Click card to close</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+             <div class="interactive-card" data-category="marble" data-id="marble-3">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="images/all marble.jpg" alt="Emperador Brown Marble" onerror="this.src='https://via.placeholder.com/400x500?text=Emperador+Brown'">
+                                <div class="card-overlay">
+                                    <span class="card-category">Marble</span>
+                                    <h3>  Marble variety </h3>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>Marble variety</h3>
+                            
+                            <div class="card-description">
+                               All available at the best price and with qualified and experienced labor.
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                0                    <span class="detail-value">Marble</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Asia</span>
+                                    <span class="detail-value">India</span>
+                                </div>
+                                
+                                <div class="detail-row">
+                                    <span class="detail-label">Finish</span>
+                                    <span class="detail-value">Polished</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Features</span>
+                                    <span class="detail-value">Warm • Elegant • Versatile</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Used in these projects:</h4>
+                                <div class="project-tags">
+                                    <a href="projects.html#project-17" class="project-tag">Traditional Kitchen</a>
+                                    <a href="projects.html#project-18" class="project-tag">Fireplace Surround</a>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 1rem; text-align: center;">
+                                <small class="text-secondary">Click card to close</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+             <div class="interactive-card" data-category="marble" data-id="marble-3">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="images/marblev.jpg" alt="Emperador Brown Marble" onerror="this.src='https://via.placeholder.com/400x500?text=Emperador+Brown'">
+                                <div class="card-overlay">
+                                    <span class="card-category">Marble</span>
+                                    <h3>all marble</h3>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>All sample</h3>
+                            
+                            <div class="card-description">
+                                Rich pure black marble with light light glass like veining. Adds warmth and luxury to any space.
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                0                    <span class="detail-value">Marble</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Asia</span>
+                                    <span class="detail-value">India</span>
+                                </div>
+                                
+                                <div class="detail-row">
+                                    <span class="detail-label">Finish</span>
+                                    <span class="detail-value">Polished</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Features</span>
+                                    <span class="detail-value">Warm • Elegant • Versatile</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Used in these projects:</h4>
+                                <div class="project-tags">
+                                    <a href="projects.html#project-17" class="project-tag">Traditional Kitchen</a>
+                                    <a href="projects.html#project-18" class="project-tag">Fireplace Surround</a>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 1rem; text-align: center;">
+                                <small class="text-secondary">Click card to close</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/wandalelogo.png" alt="WANDALE" class="footer-logo-img">
+                </div>
+                <span class="footer-copyright">© 2026 Wandale Marble and Granite Works. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/products-static.js"></script>
+</body>
+</html>

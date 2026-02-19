@@ -1,0 +1,628 @@
+/* Product & Project Cards with Tuning Effect */
+.products-section,
+.projects-section {
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Card Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Interactive Card */
+.interactive-card {
+    perspective: 2000px;
+    height: 400px;
+    cursor: pointer;
+    position: relative;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.interactive-card.tuned .card-inner {
+    transform: rotateY(180deg) rotateZ(5deg);
+}
+
+/* Card Front & Back */
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    overflow: hidden;
+    background: var(--bg-card);
+    border: 1px solid rgba(100, 216, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Front of Card */
+.card-front {
+    transform: rotateY(0deg);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.card-overlay h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.card-category {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    background: var(--gold);
+    color: #0f1322;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.card-price {
+    color: var(--gold);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.card-price span {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.7);
+    margin-left: 0.2rem;
+}
+
+/* Back of Card */
+.card-back {
+    transform: rotateY(180deg) rotateZ(5deg);
+    background: linear-gradient(135deg, #1a1f35 0%, #0f1322 100%);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    color: white;
+    border: 2px solid var(--gold);
+    box-shadow: 0 0 30px rgba(232, 197, 71, 0.3);
+    position: relative;
+    overflow-y: auto;
+}
+
+.card-back::-webkit-scrollbar {
+    width: 4px;
+}
+
+.card-back::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.1);
+}
+
+.card-back::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 2px;
+}
+
+.card-back h3 {
+    color: var(--gold);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(232, 197, 71, 0.3);
+}
+
+.card-description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.card-details {
+    margin-bottom: 1.5rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.detail-label {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.detail-value {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Projects used in section */
+.used-in-projects {
+    margin-top: 1rem;
+}
+
+.used-in-projects h4 {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-tag {
+    padding: 0.3rem 1rem;
+    background: rgba(100, 216, 255, 0.1);
+    border: 1px solid rgba(100, 216, 255, 0.3);
+    color: var(--sky);
+    font-size: 0.7rem;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.project-tag:hover {
+    background: var(--sky);
+    color: #0f1322;
+    border-color: var(--sky);
+    transform: translateY(-2px);
+}
+
+/* Back card close button */
+.close-card {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(232, 197, 71, 0.2);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.close-card:hover {
+    background: var(--gold);
+    color: #0f1322;
+    transform: rotate(90deg);
+}
+
+/* Tuning effect animation */
+@keyframes tuningPulse {
+    0% { box-shadow: 0 0 0 0 rgba(232, 197, 71, 0.7); }
+    70% { box-shadow: 0 0 0 20px rgba(232, 197, 71, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(232, 197, 71, 0); }
+}
+
+.interactive-card.tuned {
+    animation: tuningPulse 0.8s ease-out;
+}
+
+/* Background color change on tuning */
+body.card-tuned {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #000000 100%) !important;
+}
+
+/* Project Cards Specific */
+.project-card .card-front {
+    position: relative;
+}
+
+.play-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(232, 197, 71, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f1322;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 0 30px rgba(232, 197, 71, 0.5);
+}
+
+.interactive-card:hover .play-indicator {
+    opacity: 1;
+}
+
+/* Filter Bar */
+.filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.6rem 2rem;
+    background: transparent;
+    border: 1px solid rgba(100, 216, 255, 0.3);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    border-color: var(--gold);
+    color: var(--gold);
+    box-shadow: 0 0 20px rgba(232, 197, 71, 0.2);
+}
+
+/* Search Bar */
+.search-bar {
+    max-width: 400px;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: rgba(20, 26, 46, 0.8);
+    border: 1px solid rgba(100, 216, 255, 0.2);
+    color: var(--text-primary);
+    border-radius: 50px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 30px rgba(232, 197, 71, 0.2);
+}
+
+.search-bar i {
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+}
+
+/* Category Showcase */
+.category-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.category-item {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(30, 37, 64, 0.5);
+    border: 1px solid rgba(100, 216, 255, 0.1);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-item:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(232, 197, 71, 0.2);
+}
+
+.category-item i {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.category-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.category-item span {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .interactive-card {
+        height: 350px;
+    }
+    
+    .category-showcase {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .category-showcase {
+        grid-template-columns: 1fr;
+    }
+}
+/* Video Modal */
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.video-modal-content {
+    width: 90%;
+    max-width: 1000px;
+    position: relative;
+    background: #000;
+    border: 2px solid var(--gold);
+    box-shadow: 0 0 50px rgba(232, 197, 71, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.close-video-modal {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 10;
+}
+
+.close-video-modal:hover {
+    color: var(--gold);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Play indicator on cards */
+.play-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(232, 197, 71, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0f1322;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 5;
+    cursor: pointer;
+    box-shadow: 0 0 30px rgba(232, 197, 71, 0.5);
+}
+
+.interactive-card:hover .play-indicator {
+    opacity: 1;
+}
+
+.play-indicator:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Video preview in card back */
+.video-preview {
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid var(--gold);
+}
+
+/* Project location */
+.project-location {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+.project-location i {
+    margin-right: 0.3rem;
+    color: var(--gold);
+}
+
+/* Media filter */
+.media-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.media-filter-btn {
+    padding: 0.5rem 1.5rem;
+    background: transparent;
+    border: 1px solid rgba(100, 216, 255, 0.3);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.media-filter-btn i {
+    font-size: 0.9rem;
+}
+
+.media-filter-btn:hover,
+.media-filter-btn.active {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(232, 197, 71, 0.1);
+}
+
+/* No results message */
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-secondary);
+}
+
+.no-results i {
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+/* Page header */
+.page-header {
+    padding: 8rem 0 4rem;
+    text-align: center;
+    background: linear-gradient(180deg, #1e2540 0%, #1a2038 100%);
+}
+
+.page-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+}
+
+.page-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .media-filter {
+        gap: 0.5rem;
+    }
+    
+    .media-filter-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.7rem;
+    }
+    
+    .play-indicator {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .video-modal-content {
+        width: 95%;
+    }
+}

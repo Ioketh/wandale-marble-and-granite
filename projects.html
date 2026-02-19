@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects - WANDALE Marble & Granite</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products-projects.css">
+</head>
+<body>
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="images/wandalelogo.png" alt="WANDALE" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-main">Wandale</span>
+                    <span class="logo-sub">Marble and Granite</span>
+                    <span class="logo-location">UGANDA</span>
+                </div>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="projects.html" class="nav-link active">Our Projects</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="index.html#about" class="mobile-link">About</a>
+            <a href="index.html#services" class="mobile-link">Services</a>
+            <a href="products.html" class="mobile-link">Products</a>
+            <a href="projects.html" class="mobile-link">Our Projects</a>
+            <a href="index.html#contact" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Our <span class="text-gradient">Projects</span></h1>
+            <p class="page-subtitle">Explore our completed works with images and videos</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="container">
+            <!-- Category Showcase -->
+            <div class="category-showcase">
+                <div class="category-item" data-category="kitchen">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Kitchens</h3>
+                    <span>24 Projects</span>
+                </div>
+                <div class="category-item" data-category="tombs">
+                    <i class="fas fa-cross"></i>
+                    <h3>Tombs</h3>
+                    <span>18 Projects</span>
+                </div>
+                <div class="category-item" data-category="stairs">
+                    <i class="fas fa-stairs"></i>
+                    <h3>Stairs</h3>
+                    <span>15 Projects</span>
+                </div>
+                <div class="category-item" data-category="flooring">
+                    <i class="fas fa-border-all"></i>
+                    <h3>Flooring</h3>
+                    <span>22 Projects</span>
+                </div>
+                <div class="category-item" data-category="bathroom">
+                    <i class="fas fa-bath"></i>
+                    <h3>Bathrooms</h3>
+                    <span>12 Projects</span>
+                </div>
+                <div class="category-item" data-category="custom">
+                    <i class="fas fa-paint-roller"></i>
+                    <h3>Custom</h3>
+                    <span>9 Projects</span>
+                </div>
+            </div>
+            
+            <!-- Media Type Filter -->
+            <div class="media-filter">
+                <button class="media-filter-btn active" data-media="all">
+                    <i class="fas fa-layer-group"></i> All
+                </button>
+                <button class="media-filter-btn" data-media="image">
+                    <i class="fas fa-image"></i> Images
+                </button>
+                <button class="media-filter-btn" data-media="video">
+                    <i class="fas fa-video"></i> Videos
+                </button>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="projectSearch" placeholder="Search projects...">
+                <i class="fas fa-search"></i>
+            </div>
+            
+            <!-- Category Filters -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="kitchen">Kitchen</button>
+                <button class="filter-btn" data-filter="tombs">Tombs</button>
+                <button class="filter-btn" data-filter="stairs">Stairs</button>
+                <button class="filter-btn" data-filter="flooring">Flooring</button>
+                <button class="filter-btn" data-filter="bathroom">Bathroom</button>
+                <button class="filter-btn" data-filter="custom">Custom</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="cards-grid" id="projectsGrid">
+                <!-- Kitchen Projects -->
+                <div class="interactive-card" data-category="kitchen" data-media="image" data-id="kitchen-1">
+                    <div class="card-inner">
+                        <!-- Front of Card -->
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="images/pkitchen.jpg" alt="Modern Kitchen with Carrara Marble" onerror="this.src='https://via.placeholder.com/400x500?text=Modern+Kitchen'">
+                                <div class="play-indicator">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                                <div class="card-overlay">
+                                    <span class="card-category">Kitchen</span>
+                                    <h3>Modern Kitchen with Carrara Marble</h3>
+                                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Kampala, Uganda</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Back of Card -->
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>Modern Kitchen with White marble</h3>
+                            
+                            <div class="project-media-preview">
+                                <img src="images/pwhiterose.jpg" alt="Kitchen Detail" onerror="this.src='https://via.placeholder.com/400x300?text=Kitchen+Detail'">
+                            </div>
+                            
+                            <div class="card-description">
+                                Complete kitchen renovation featuring  White Marble countertops and backsplash. Includes waterfall island and custom cabinetry.
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                                    <span class="detail-value">Kitchen</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Location</span>
+                                    <span class="detail-value">Kololo, Kampala</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Completed</span>
+                                    <span class="detail-value">January 2026</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Stone Used</span>
+                                    <span class="detail-value">Carrara Marble</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Products used:</h4>
+                                <div class="project-tags">
+                                    <a href="products.html#marble-1" class="project-tag">whiterose marble </a>
+                                    <a href="products.html#marble-3" class="project-tag">Emperador Brown</a>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 1rem; text-align: center;">
+                                <small class="text-secondary">Click card to close</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interactive-card" data-category="kitchen" data-media="video" data-id="kitchen-2">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="https://vm.tiktok.com/ZS9eNfN6Dvo5N-76lhn"><div class="play-indicator">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="card-overlay">
+                                    <span class="card-category">Kitchen</span>
+                                    <h3>Luxury Kitchen with Black Galaxy Granite</h3>
+                                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Naguru, Kampala</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>Luxury Kitchen with Black Galaxy Granite</h3>
+                            
+                            <div class="video-preview">
+                                <iframe width="100%" height="200" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            
+                            <div class="card-description">
+                                Video tour of a stunning modern kitchen featuring Black Galaxy Granite countertops. The sparkling gold flecks create a dramatic effect.
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                                    <span class="detail-value">Kitchen</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Location</span>
+                                    <span class="detail-value">Naguru, Kampala</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Completed</span>
+                                    <span class="detail-value">March 2026</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Stone Used</span>
+                                    <span class="detail-value">Black Galaxy Granite</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Products used:</h4>
+                                <div class="project-tags">
+                                    <a href="products.html#granite-1" class="project-tag">Black Galaxy Granite</a>
+                                </div>
+                            </div>
+                            
+                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn-outline" style="margin-top: 1rem; width: 100%;">
+                                <i class="fab fa-youtube"></i> Watch Full Video
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tombs Projects -->
+                <div class="interactive-card" data-category="tombs" data-media="image" data-id="tomb-1">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="images/ptomb.jpg" alt="Memorial Tomb with Absolute Black Granite" onerror="this.src='https://via.placeholder.com/400x500?text=Memorial+Tomb'">
+                                <div class="play-indicator">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                                <div class="card-overlay">
+                                    <span class="card-category">Tomb</span>
+                                    <h3>Memorial Tomb with Absolute Black Granite</h3>
+                                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Jinja, Uganda</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>Memorial Tomb with Absolute Black Granite</h3>
+                            
+                            <div class="project-media-preview">
+                                <img src="images/ptomb2.jpg" alt="Tomb Detail" onerror="this.src='https://via.placeholder.com/400x300?text=Tomb+Detail'">
+                            </div>
+                            
+                            <div class="card-description">
+                                Elegant memorial tomb crafted from Absolute Black Granite. Features polished finish with engraved text and decorative elements.
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                                    <span class="detail-value">Tomb</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Location</span>
+                                    <span class="detail-value">Jinja Cemetery</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Completed</span>
+                                    <span class="detail-value">February 2023</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Stone Used</span>
+                                    <span class="detail-value">Absolute Black Granite</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Products used:</h4>
+                                <div class="project-tags">
+                                    <a href="products.html#granite-2" class="project-tag">Absolute Black Granite</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interactive-card" data-category="tombs" data-media="video" data-id="tomb-2">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="https://img.youtube.com/vi/VIDEO_ID_2/maxresdefault.jpg" alt="Tomb Installation Process">
+                                <div class="play-indicator">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="card-overlay">
+                                    <span class="card-category">Tomb</span>
+                                    <h3>Memorial Tomb Installation Process</h3>
+                                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Entebbe, Uganda</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>Memorial Tomb Installation Process</h3>
+                            
+                            <div class="video-preview">
+                                <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            
+                            <div class="card-description">
+                                Time-lapse video showing the complete installation process of a memorial tomb using premium marble and granite.
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                                    <span class="detail-value">Tomb</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Location</span>
+                                    <span class="detail-value">Entebbe</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Completed</span>
+                                    <span class="detail-value">January 2024</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Stone Used</span>
+                                    <span class="detail-value">Carrara Marble, Black Granite</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Products used:</h4>
+                                <div class="project-tags">
+                                    <a href="products.html#marble-1" class="project-tag">Carrara Marble</a>
+                                    <a href="products.html#granite-2" class="project-tag">Absolute Black</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stairs Projects -->
+                <div class="interactive-card" data-category="stairs" data-media="image" data-id="stairs-1">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="images/pstair1.jpg" alt="Marble Staircase with Travertine" onerror="this.src='https://via.placeholder.com/400x500?text=Marble+Staircase'">
+                                <div class="play-indicator">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                                <div class="card-overlay">
+                                    <span class="card-category">Stairs</span>
+                                    <h3>Grand Marble Staircase with Travertine</h3>
+                                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Muyenga, Kampala</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>Grand Marble Staircase with Travertine</h3>
+                            
+                            <div class="project-media-preview">
+                                <img src="images/pstair2.jpg" alt="Staircase Detail" onerror="this.src='https://via.placeholder.com/400x300?text=Staircase+Detail'">
+                            </div>
+                            
+                            <div class="card-description">
+                                Elegant floating staircase featuring Roman Travertine treads and risers with stainless steel balustrade.
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                                    <span class="detail-value">Stairs</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Location</span>
+                                    <span class="detail-value">Muyenga, Kampala</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Completed</span>
+                                    <span class="detail-value">December 2025</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Stone Used</span>
+                                    <span class="detail-value">Roman Travertine</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Products used:</h4>
+                                <div class="project-tags">
+                                    <a href="products.html#travertine-1" class="project-tag">Roman Travertine</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interactive-card" data-category="stairs" data-media="video" data-id="stairs-2">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="https://img.youtube.com/vi/VIDEO_ID_3/maxresdefault.jpg" alt="Staircase Installation">
+                                <div class="play-indicator">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="card-overlay">
+                                    <span class="card-category">Stairs</span>
+                                    <h3>Modern Staircase Installation</h3>
+                                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Bukoto, Kampala</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>Modern Staircase Installation</h3>
+                            
+                            <div class="video-preview">
+                                <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            
+                            <div class="card-description">
+                                Video documentation of a custom marble staircase installation from start to finish.
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                                    <span class="detail-value">Stairs</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Location</span>
+                                    <span class="detail-value">Bukoto, Kampala</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Completed</span>
+                                    <span class="detail-value">November 2025</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Stone Used</span>
+                                    <span class="detail-value">Carrara Marble</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Products used:</h4>
+                                <div class="project-tags">
+                                    <a href="products.html#marble-1" class="project-tag">Carrara Marble</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flooring Projects -->
+                <div class="interactive-card" data-category="flooring" data-media="image" data-id="flooring-1">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="images/pfloor1.jpg" alt="Marble Flooring" onerror="this.src='https://via.placeholder.com/400x500?text=Marble+Flooring'">
+                                <div class="play-indicator">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                                <div class="card-overlay">
+                                    <span class="card-category">Flooring</span>
+                                    <h3>Luxury Marble Flooring Installation</h3>
+                                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Victoria Islands, Kampala</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>Luxury Marble Flooring Installation</h3>
+                            
+                            <div class="project-media-preview">
+                                <img src="images/pfloor1.jpg" alt="Flooring Detail" onerror="this.src='https://via.placeholder.com/400x300?text=Flooring+Detail'">
+                            </div>
+                            
+                            <div class="card-description">
+                                Extensive marble flooring project featuring Calacatta Gold with custom geometric patterns and borders.
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                                    <span class="detail-value">Flooring</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Location</span>
+                                    <span class="detail-value">Victoria Islands</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Area</span>
+                                    <span class="detail-value">250 m²</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Stone Used</span>
+                                    <span class="detail-value">Calacatta Gold Marble</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Products used:</h4>
+                                <div class="project-tags">
+                                    <a href="products.html#marble-2" class="project-tag">Calacatta Gold</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bathroom Projects -->
+                <div class="interactive-card" data-category="bathroom" data-media="image" data-id="bathroom-1">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="images/pbath.jpg" alt="Luxury Bathroom" onerror="this.src='https://via.placeholder.com/400x500?text=Luxury+Bathroom'">
+                                <div class="play-indicator">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                                <div class="card-overlay">
+                                    <span class="card-category">Bathroom</span>
+                                    <h3>Spa-Inspired Bathroom with Onyx</h3>
+                                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Kololo, Kampala</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>Spa-Inspired Bathroom with Onyx</h3>
+                            
+                            <div class="project-media-preview">
+                                <img src="images/pbath.jpg" alt="Bathroom Detail" onerror="this.src='https://via.placeholder.com/400x300?text=Bathroom+Detail'">
+                            </div>
+                            
+                            <div class="card-description">
+                                Complete bathroom renovation featuring backlit Honey Onyx vanity and walls with Taj Mahal Quartzite flooring.
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                                    <span class="detail-value">Bathroom</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Location</span>
+                                    <span class="detail-value">Kololo, Kampala</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Completed</span>
+                                    <span class="detail-value">April 2026</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Stone Used</span>
+                                    <span class="detail-value">Honey Onyx, Taj Mahal</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Products used:</h4>
+                                <div class="project-tags">
+                                    <a href="products.html#onyx-1" class="project-tag">Honey Onyx</a>
+                                    <a href="products.html#quartzite-1" class="project-tag">Taj Mahal</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="interactive-card" data-category="bathroom" data-media="video" data-id="bathroom-2">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="https://img.youtube.com/vi/VIDEO_ID_4/maxresdefault.jpg" alt="Bathroom Renovation">
+                                <div class="play-indicator">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                                <div class="card-overlay">
+                                    <span class="card-category">Bathroom</span>
+                                    <h3>Complete Bathroom Renovation</h3>
+                                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Naguru, Kampala</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>Complete Bathroom Renovation</h3>
+                            
+                            <div class="video-preview">
+                                <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID_4" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            
+                            <div class="card-description">
+                                Video walkthrough of a complete bathroom renovation using premium marble and granite.
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                                    <span class="detail-value">Bathroom</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Location</span>
+                                    <span class="detail-value">Naguru, Kampala</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Completed</span>
+                                    <span class="detail-value">March 2026</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Stone Used</span>
+                                    <span class="detail-value">Carrara Marble</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Products used:</h4>
+                                <div class="project-tags">
+                                    <a href="products.html#marble-1" class="project-tag">Carrara Marble</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Projects -->
+                <div class="interactive-card" data-category="custom" data-media="image" data-id="custom-1">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-image">
+                                <img src="images/pbank2.jpg" alt="Custom Marble Fireplace" onerror="this.src='https://via.placeholder.com/400x500?text=Custom+Fireplace'">
+                                <div class="play-indicator">
+                                    <i class="fas fa-search-plus"></i>
+                                </div>
+                                <div class="card-overlay">
+                                    <span class="card-category">Custom</span>
+                                    <h3>Custom Marble around finacial installation</h3>
+                                    <p class="project-location"><i class="fas fa-map-marker-alt"></i> Nakasero, uganda</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-back">
+                            <button class="close-card"><i class="fas fa-times"></i></button>
+                            <h3>Custom Marble Banking settings </h3>
+                            
+                            <div class="project-media-preview">
+                                <img src="images/pbank.jpg" alt="Fireplace Detail" onerror="this.src='https://via.placeholder.com/400x300?text=Fireplace+Detail'">
+                            </div>
+                            
+                            <div class="card-description">
+                                Bespoke fireplace surround hand-carved from Emperador Brown Marble with intricate detailing.
+                            </div>
+                            
+                            <div class="card-details">
+                                <div class="detail-row">
+                                    <span class="detail-label">Category</span>
+                                    <span class="detail-value">Custom</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Location</span>
+                                    <span class="detail-value">Entebbe</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Completed</span>
+                                    <span class="detail-value">February 2026</span>
+                                </div>
+                                <div class="detail-row">
+                                    <span class="detail-label">Stone Used</span>
+                                    <span class="detail-value">Emperador Brown</span>
+                                </div>
+                            </div>
+                            
+                            <div class="used-in-projects">
+                                <h4>Products used:</h4>
+                                <div class="project-tags">
+                                    <a href="products.html#marble-3" class="project-tag">Emperador Brown</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-content">
+            <button class="close-video-modal"><i class="fas fa-times"></i></button>
+            <div class="video-container" id="videoContainer">
+                <!-- Video will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/wandalelogo.png" alt="WANDALE" class="footer-logo-img">
+                </div>
+                <span class="footer-copyright">© 2026 Wandale Marble and Granite Works. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-content"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/navigation.js"></script>
+    <script src="js/projects-static.js"></script>
+</body>
+</html>
